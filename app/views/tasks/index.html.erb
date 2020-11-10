@@ -1,0 +1,16 @@
+
+<h1>My Tasks</h1>
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <% if task.completed == '1' %>
+        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+        <% else %>
+        <i class="fa fa-square-o" aria-hidden="true"></i>
+      <% end %>
+      <%= link_to task.title, task_path(task.id) %></li>
+  <% end %>
+</ul>
+
+<i class="fa fa-check-square-o" aria-hidden="true"></i>
+<i class="fa fa-square-o" aria-hidden="true"></i>
